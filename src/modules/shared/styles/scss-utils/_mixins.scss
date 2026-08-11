@@ -1,0 +1,14 @@
+@mixin hover-scale-img {
+  transition: transform var(--transition-speed, 0.3s) ease;
+  will-change: transform;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+@mixin reset-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
