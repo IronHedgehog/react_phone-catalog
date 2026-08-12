@@ -1,11 +1,21 @@
+/* src/modules/shared/styles/variables.scss */
+
 :root {
-  --bg-primary: #fff;
-  --text-primary: #313237;
-  --accent-color: #905bff;
+  --bg-color: #fff;
+  --text-primary: #121212;
+  --border-color: #e2e8f0;
 }
 
 [data-theme='dark'] {
-  --bg-primary: #0f111a;
-  --text-primary: #f1f2f9;
-  --accent-color: #905bff;
+  --bg-color: #121212;
+  --text-primary: #fff;
+  --border-color: #333;
+}
+
+body {
+  color: var(--text-primary);
+  background-color: var(--bg-color);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }

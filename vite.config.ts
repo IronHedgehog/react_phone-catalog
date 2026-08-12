@@ -8,6 +8,8 @@ export default defineConfig({
   resolve: {
     alias: {
       '@shared': path.resolve(__dirname, './src/modules/shared'),
+      '@store': path.resolve(__dirname, './src/store'),
+      '@modules': path.resolve(__dirname, './src/modules'),
     },
   },
   css: {

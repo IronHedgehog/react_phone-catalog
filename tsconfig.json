@@ -10,7 +10,9 @@
     "isolatedModules": true,
     "baseUrl": ".",
     "paths": {
-      "@shared/*": ["src/modules/shared/*"]
+      "@shared/*": ["src/modules/shared/*"],
+      "@store/*": ["src/store/*"],
+      "@modules/*": ["src/modules/*"]
     },
     "sourceMap": false,
     "types": ["node", "cypress"],

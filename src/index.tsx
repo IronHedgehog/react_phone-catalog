@@ -1,4 +1,5 @@
 import { Loader } from '@shared/components';
+import { ThemeProvider } from '@shared/components';
 import '@shared/styles';
 import React from 'react';
 import { createRoot } from 'react-dom/client';
@@ -12,7 +13,9 @@ createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate loading={<Loader />} persistor={persistor}>
-        <RouterProvider router={router} />
+        <ThemeProvider>
+          <RouterProvider router={router} />
+        </ThemeProvider>
       </PersistGate>
     </Provider>
   </React.StrictMode>,

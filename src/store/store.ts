@@ -13,16 +13,20 @@ import {
 import storage from 'redux-persist/lib/storage';
 import { catalogApi } from './api/catalogApi';
 import cartReducer from './slices/cartSlice';
+import favoritesReducer from './slices/favoritesSlice';
+import { themeSlice } from './slices/themeSlice';
 
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['cart'],
+  whitelist: ['cart', 'favorites', 'theme'],
 };
 
 const rootReducer = combineReducers({
   [catalogApi.reducerPath]: catalogApi.reducer,
   cart: cartReducer,
+  favorites: favoritesReducer,
+  theme: themeSlice.reducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
