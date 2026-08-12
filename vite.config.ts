@@ -19,6 +19,7 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         api: 'modern-compiler',
+        silenceDeprecations: ['legacy-js-api'],
         additionalData: `@use "@shared/styles/scss-utils/_globals.scss" as *;`,
       },
     },

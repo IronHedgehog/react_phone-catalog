@@ -24,7 +24,7 @@ export const Header = () => {
           </NavLink>
         </nav>
         <div className={styles.actions}>
-          <Link to="/favorites" className={styles.actionLink}>
+          <Link to="/favourites" className={styles.actionLink}>
             Favs
           </Link>
           <Link to="/cart" className={styles.actionLink}>

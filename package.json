@@ -5,6 +5,7 @@
   "keywords": [],
   "author": "Mate Academy",
   "license": "GPL-3.0",
+  "type": "module",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.2",
     "bulma": "^1.0.1",
@@ -40,7 +41,7 @@
     "mochawesome-merge": "^4.3.0",
     "mochawesome-report-generator": "^6.2.0",
     "prettier": "^3.3.2",
-    "sass": "^1.102.0",
+    "sass-embedded": "^1.100.0",
     "stylelint": "^16.7.0",
     "typescript": "^5.2.2",
     "vite": "^5.3.1"
