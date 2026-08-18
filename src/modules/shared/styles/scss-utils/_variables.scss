@@ -10,3 +10,26 @@ $z-index-modal: 1000;
 /* Animations */
 $transition-speed: 0.3s;
 $transition-func: ease-in-out;
+
+$padd-inline--sm: 16px;
+$padd-inline--md: 24px;
+$padd-inline--lg: 32px;
+
+$basic-font-size: 16px;
+$main-font-family: 'Mont';
+$main-font-style: normal;
+$main-font-weight: 600;
+$main-font-size: 14px;
+$main-line-height: 21px;
+
+$mobile-min-width: 320px;
+$tablet-min-width: 640px;
+$desktop-min-width: 1200px;
+
+$header-height-sm: 48px;
+$header-height-lg: 64px;
+
+$logo-font-size-sm: 16px;
+$logo-letter-spacing-sm: -0.5px;
+$logo-width-sm: 64px;
+$logo-height-sm: 22px;

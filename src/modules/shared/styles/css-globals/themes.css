@@ -4,12 +4,18 @@
   --bg-color: #fff;
   --text-primary: #121212;
   --border-color: #e2e8f0;
+  --font-family: 'Mont';
+  --font-style: normal;
+  --font-weight: 600;
+  --font-size: 14px;
+  --line-height: 21px;
 }
 
 [data-theme='dark'] {
-  --bg-color: #121212;
-  --text-primary: #fff;
-  --border-color: #333;
+  --bg-color: #0f1121;
+  --text-primary: #f1f2f9;
+  --border-color: #3b3e4a;
+  --icon-header-color: #4a4d58;
 }
 
 body {

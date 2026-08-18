@@ -1,0 +1,15 @@
+.container {
+  min-width: $mobile-min-width;
+  margin: 0 auto;
+  padding-inline: $padd-inline--sm;
+
+  @include on-tablet {
+    min-width: $tablet-min-width;
+    padding-inline: $padd-inline--md;
+  }
+
+  @include on-desktop {
+    max-width: $desktop-min-width;
+    padding-inline: $padd-inline--lg;
+  }
+}
