@@ -103,23 +103,27 @@
 
 .header {
   border-bottom: 1px solid var(--border-color);
-  box-shadow: -1px 0px 0px var(--border-color);
+  box-shadow: -1px var(--border-color);
 }
 
 .headerContent {
   position: relative;
+
   @include page-grid;
-  height: $header-height-sm;
+
   align-items: center;
+  height: $header-height-sm;
+
   @include on-desktop {
     height: $header-height-lg;
   }
 }
 
 .logoIcon {
-  fill: red;
   width: $logo-width-sm;
   height: $logo-height-sm;
+
+  fill: red;
 }
 
 .nav {
@@ -133,8 +137,10 @@
 .burgerMenu {
   position: absolute;
   right: -16px;
+
   width: 48px;
   height: 100%;
+
   border: none;
   background: transparent;
   outline: none;
@@ -144,7 +150,6 @@
 .menuIcon {
   width: 16px;
   height: 16px;
-  // padding: 16px;
 
   fill: var(--text-primary);
 }
