@@ -1,0 +1,67 @@
+.overlay {
+  position: fixed;
+  top: $header-height-sm;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - $header-height-sm);
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+
+  transform: translateX(100%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    opacity 0.4s ease-in-out,
+    visibility 0s linear 0.4s;
+
+  &.isOpen {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transition:
+      transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+      opacity 0.4s ease-in-out,
+      visibility 0s linear 0s;
+  }
+  @include on-tablet {
+    display: none;
+  }
+}
+
+.navWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.actionsGrid {
+  display: flex;
+  height: $header-height-sm;
+  border-top: 1px solid var(--border-color);
+}
+
+.actionLink {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divider {
+  width: 1px;
+  background-color: var(--border-color);
+}
+
+.actionIcon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
