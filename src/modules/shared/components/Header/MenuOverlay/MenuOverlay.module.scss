@@ -2,8 +2,9 @@
   position: fixed;
   top: $header-height-sm;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: calc(100vh - $header-height-sm);
+  height: calc(100dvh - $header-height-sm);
   background-color: var(--bg-color);
   display: flex;
   flex-direction: column;
