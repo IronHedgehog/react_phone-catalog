@@ -26,7 +26,7 @@ export const Header = () => {
         <div className={styles.headerContent}>
           <Link to="/" className={styles.logoLink}>
             <svg className={styles.logoIcon}>
-              <use href={`${import.meta.env.BASE_URL}img/logo.svg`} />
+              <use href={`${import.meta.env.BASE_URL}/img/logo.svg`} />
             </svg>
           </Link>
 
@@ -36,12 +36,13 @@ export const Header = () => {
           >
             <svg className={styles.menuIcon}>
               <use
-                href={`${import.meta.env.BASE_URL}img/sprite.svg#${isMenuOpen ? 'icon-close' : 'icon-menu'}`}
+                href={`${import.meta.env.BASE_URL}/img/sprite.svg#${isMenuOpen ? 'icon-close' : 'icon-menu'}`}
               />
             </svg>
           </button>
-
-          <HeaderActions />
+          <div className={styles.actionWrapper}>
+            <HeaderActions />
+          </div>
         </div>
       </Container>
       <MenuOverlay isOpen={isMenuOpen} onClose={handleCloseMenu} />

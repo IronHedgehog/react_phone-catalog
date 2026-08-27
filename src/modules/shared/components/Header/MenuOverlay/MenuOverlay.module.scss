@@ -39,12 +39,11 @@
   flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .actionsGrid {
   display: flex;
-  height: $header-height-sm;
+  height: $actionsGridHeight;
   border-top: 1px solid var(--border-color);
 }
 

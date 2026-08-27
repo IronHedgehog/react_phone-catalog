@@ -45,3 +45,10 @@
 
   fill: var(--text-primary);
 }
+
+.actionWrapper {
+  display: none;
+  @include on-tablet {
+    display: block;
+  }
+}

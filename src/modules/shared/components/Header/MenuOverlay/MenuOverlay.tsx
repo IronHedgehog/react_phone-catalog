@@ -1,6 +1,7 @@
 import cn from 'classnames';
 import { useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { HeaderActions } from '../HeaderActions';
 import { NavBar } from '../NavBar/NavBar';
 import styles from './MenuOverlay.module.scss';
 
@@ -38,21 +39,7 @@ export const MenuOverlay = ({ isOpen, onClose }: MenuOverlayProps) => {
       </div>
 
       <div className={styles.actionsGrid}>
-        <Link
-          to="/favourites"
-          className={styles.actionLink}
-          aria-label="Favourites"
-        >
-          <svg className={styles.actionIcon}>
-            <use href={`${import.meta.env.BASE_URL}img/sprite.svg#heart`} />
-          </svg>
-        </Link>
-        <div className={styles.divider} />
-        <Link to="/cart" className={styles.actionLink} aria-label="Cart">
-          <svg className={styles.actionIcon}>
-            <use href={`${import.meta.env.BASE_URL}img/sprite.svg#cart`} />
-          </svg>
-        </Link>
+        <HeaderActions />
       </div>
     </aside>
   );
