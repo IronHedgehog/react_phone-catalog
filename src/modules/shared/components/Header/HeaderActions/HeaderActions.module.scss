@@ -1,9 +1,11 @@
 .actions {
   width: 100%;
+
   @include on-tablet {
     margin-left: auto;
   }
 }
+
 .actionsList {
   display: flex;
 
@@ -14,9 +16,9 @@
 
 .actionItem {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex: 1;
+  align-items: center;
+  justify-content: center;
 
   &:not(:last-child) {
     border-right: 1px solid var(--border-color);
@@ -31,15 +33,18 @@
 }
 
 .actionBlock {
-  display: block;
-  padding-inline: 72px;
-  padding-block: 24px;
   cursor: pointer;
+
+  display: block;
+
+  padding-block: 24px;
+  padding-inline: 72px;
+
   transition: background-color 0.2s ease;
 
   @include on-tablet {
-    padding-inline: 16px;
     padding-block: 16px;
+    padding-inline: 16px;
   }
 
   &:hover {
@@ -60,15 +65,16 @@
   color: var(--text-primary);
 }
 
-.isActive:after {
+.isActive::after {
   content: '';
 
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
+  left: 0;
 
   display: block;
+
   width: 100%;
-  left: 0px;
   height: 2px;
 
   background-color: var(--text-primary);

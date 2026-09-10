@@ -1,19 +1,22 @@
 .overlay {
+  pointer-events: none;
+
   position: fixed;
+  z-index: 100;
   top: $header-height-sm;
   left: 0;
+  transform: translateX(100%);
+
+  display: flex;
+  flex-direction: column;
+
   width: 100%;
   height: calc(100vh - $header-height-sm);
   height: calc(100dvh - $header-height-sm);
-  background-color: var(--bg-color);
-  display: flex;
-  flex-direction: column;
-  z-index: 100;
 
-  transform: translateX(100%);
-  opacity: 0;
   visibility: hidden;
-  pointer-events: none;
+  opacity: 0;
+  background-color: var(--bg-color);
 
   transition:
     transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
@@ -21,25 +24,29 @@
     visibility 0s linear 0.4s;
 
   &.isOpen {
-    transform: translateX(0);
-    opacity: 1;
-    visibility: visible;
     pointer-events: auto;
+
+    transform: translateX(0);
+
+    visibility: visible;
+    opacity: 1;
 
     transition:
       transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
       opacity 0.4s ease-in-out,
       visibility 0s linear 0s;
   }
+
   @include on-tablet {
     display: none;
   }
 }
 
 .navWrapper {
-  flex: 1;
   display: flex;
+  flex: 1;
   justify-content: center;
+
   padding-block: 24px;
   padding-inline: 16px;
 }
@@ -50,10 +57,10 @@
 }
 
 .actionLink {
-  flex: 1;
   display: flex;
-  justify-content: center;
+  flex: 1;
   align-items: center;
+  justify-content: center;
 }
 
 .divider {
