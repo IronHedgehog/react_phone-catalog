@@ -40,11 +40,12 @@
   flex: 1;
   display: flex;
   justify-content: center;
+  padding-block: 24px;
+  padding-inline: 16px;
 }
 
 .actionsGrid {
   display: flex;
-  height: $actionsGridHeight;
   border-top: 1px solid var(--border-color);
 }
 

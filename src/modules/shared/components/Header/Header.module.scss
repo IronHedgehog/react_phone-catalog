@@ -16,11 +16,23 @@
   }
 }
 
+.logoLink {
+  display: block;
+  width: $logo-width-sm;
+  height: 100%;
+  padding-top: 19.5px;
+}
+
 .logoIcon {
   width: $logo-width-sm;
   height: $logo-height-sm;
 
-  fill: red;
+  fill: var(--text-primary);
+
+  @include on-desktop {
+    width: $logo-width-lg;
+    height: $logo-height-lg;
+  }
 }
 
 .burgerMenu {
@@ -46,9 +58,26 @@
   fill: var(--text-primary);
 }
 
+.navWrapper {
+  display: none;
+  @include on-tablet {
+    display: grid;
+    grid-column: 3 / 8;
+  }
+  @include on-desktop {
+    grid-column: 4 / 12;
+  }
+}
+
 .actionWrapper {
   display: none;
   @include on-tablet {
-    display: block;
+    display: grid;
+    grid-column: 9 / 13;
+    margin-right: -24px;
+  }
+  @include on-desktop {
+    grid-column: 21 / 25;
+    margin-right: -32px;
   }
 }

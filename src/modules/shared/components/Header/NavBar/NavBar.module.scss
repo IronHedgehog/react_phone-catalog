@@ -1,8 +1,31 @@
+$sm-navlist-gap: 16px 0;
+$md-navlist-gap: 0px 32px;
+$lg-navlist-gap: 0px 64px;
+$sm-padding-block: 8px;
+$md-padding-block: 18.5px;
+$lg-padding-block: 26.5px;
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  gap: $sm-navlist-gap;
+  @include on-tablet {
+    flex-direction: row;
+    gap: $md-navlist-gap;
+  }
+  @include on-desktop {
+    gap: $lg-navlist-gap;
+  }
+}
+
 .navItem {
   text-align: center;
 }
 
 .navLink {
+  display: block;
+  padding-block: $sm-padding-block;
+
   font-family: Mont, Montserrat, sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -10,7 +33,30 @@
   line-height: 11px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  color: var(--mobile-menu-link-color);
+  @include on-tablet {
+    padding-block: $md-padding-block;
+  }
+  @include on-desktop {
+    padding-block: $lg-padding-block;
+  }
 }
 
-// .isActive {
-// }
+.isActive {
+  position: relative;
+  color: var(--text-primary);
+}
+
+.isActive:after {
+  content: '';
+
+  position: absolute;
+  bottom: 0px;
+
+  display: block;
+  width: 100%;
+  height: 2px;
+
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--text-primary);
+}

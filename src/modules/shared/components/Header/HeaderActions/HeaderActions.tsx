@@ -1,11 +1,15 @@
+import cn from 'classnames';
 import { memo } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styles from './HeaderActions.module.scss';
 
 const actions = [
   { to: '/favourites', label: 'Favorites', icon: 'heart' },
   { to: '/cart', label: 'Shopping Cart', icon: 'cart' },
 ];
+
+const getLinkClass = ({ isActive }: { isActive: boolean }): string =>
+  cn(styles.actionBlock, { [styles.isActive]: isActive });
 
 export const HeaderActions = memo(() => {
   return (
@@ -14,9 +18,9 @@ export const HeaderActions = memo(() => {
         <ul className={styles.actionsList}>
           {actions.map(action => (
             <li className={styles.actionItem} key={action.to}>
-              <Link
+              <NavLink
                 to={action.to}
-                className={styles.actionBlock}
+                className={getLinkClass}
                 aria-label={action.label}
               >
                 <svg
@@ -27,7 +31,7 @@ export const HeaderActions = memo(() => {
                     href={`${import.meta.env.BASE_URL}/img/sprite.svg#icon-${action.icon}`}
                   />
                 </svg>
-              </Link>
+              </NavLink>
             </li>
           ))}
         </ul>

@@ -5,6 +5,7 @@ import { Container } from '../Container';
 import styles from './Header.module.scss';
 import { HeaderActions } from './HeaderActions';
 import { MenuOverlay } from './MenuOverlay';
+import { NavBar } from './NavBar';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -40,6 +41,9 @@ export const Header = () => {
               />
             </svg>
           </button>
+          <div className={styles.navWrapper}>
+            <NavBar />
+          </div>
           <div className={styles.actionWrapper}>
             <HeaderActions />
           </div>
