@@ -16,6 +16,9 @@ $transition-func: ease-in-out;
 $padd-inline--sm: 16px;
 $padd-inline--md: 24px;
 $padd-inline--lg: 32px;
+$section-gap: 24px;
+$section-gap-tablet: 32px;
+$section-gap-desktop: 56px;
 
 // font
 $basic-font-size: 16px;
@@ -24,6 +27,13 @@ $main-font-style: normal;
 $main-font-weight: 600;
 $main-font-size: 14px;
 $main-line-height: 21px;
+$h1-font-weight: 800;
+$h1-font-size: 32px;
+$h1-line-height: 41px;
+
+// Desktop & Tablet/H1
+$h1-font-size-desktop: 48px;
+$h1-line-height-desktop: 56px;
 
 // breakpoints
 $mobile-min-width: 320px;
@@ -44,3 +54,11 @@ $logo-height-lg: 26px;
 
 // overlay
 // $actionsGridHeight: 160px;
+$slider-arrow-gutter: 51px;
+$slider-arrow-gutter-desktop: 48px;
+$slider-arrow-width: 32px;
+$slider-pagination-height: 32px;
+$slider-bullet-width: 14px;
+$slider-bullet-height: 4px;
+$slider-arrow-icon-width: 6px;
+$slider-arrow-icon-height: 10px;

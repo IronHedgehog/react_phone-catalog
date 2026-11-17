@@ -1,0 +1,45 @@
+.heroSection {
+  padding-block: $section-gap;
+
+  @include on-tablet {
+    padding-block: $section-gap-tablet;
+  }
+
+  @include on-desktop {
+    padding-block: $section-gap-desktop;
+  }
+}
+
+.heroTitle {
+  margin-bottom: $section-gap;
+
+  font-size: $h1-font-size;
+  font-weight: $h1-font-weight;
+  line-height: $h1-line-height;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+
+  @include on-tablet {
+    margin-bottom: $section-gap-tablet;
+    font-size: $h1-font-size-desktop;
+    line-height: $h1-line-height-desktop;
+  }
+
+  @include on-desktop {
+    margin-bottom: $section-gap-desktop;
+  }
+}
+
+.sliderContainer {
+  width: 100%;
+  margin-inline: auto;
+
+  @include on-tablet {
+    padding-inline: $padd-inline--md;
+  }
+
+  @include on-desktop {
+    max-width: $desktop-min-width;
+    padding-inline: $padd-inline--lg;
+  }
+}

@@ -2,3 +2,4 @@ import './css-globals/page.css';
 import './css-globals/reset.css';
 import './css-globals/themes.css';
 import './css-globals/typography.css';
+import './css-globals/utilities.css';

@@ -1,0 +1,92 @@
+/*
+ * Swiper генерує власні CSS-класи для навігації та пагінації
+ * (.swiper-button-prev, .swiper-button-next, .swiper-pagination тощо).
+ *
+ * CSS Modules автоматично перейменовує локальні класи, тому для стилізації
+ * елементів Swiper використовуємо :global().
+ *
+ * Stylelint не розпізнає :global() як стандартний CSS-псевдоклас.
+ * Через це вимикаємо лише правило selector-pseudo-class-no-unknown
+ * для цього файлу. Решта перевірок Stylelint залишаються активними.
+ */
+
+/* stylelint-disable selector-pseudo-class-no-unknown */
+.swiperContainer {
+  padding-bottom: $slider-pagination-height;
+
+  :global(.swiper-button-prev),
+  :global(.swiper-button-next) {
+    display: none;
+
+    @include on-tablet {
+      position: absolute;
+      top: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: $slider-arrow-width;
+      height: calc(100% - #{$slider-pagination-height});
+      margin-top: 0;
+
+      color: var(--text-primary);
+
+      background-color: var(--slider-arrow-bg);
+    }
+
+    svg {
+      width: $slider-arrow-icon-width;
+      height: $slider-arrow-icon-height;
+    }
+  }
+
+  :global(.swiper-button-prev) {
+    left: 0;
+  }
+
+  :global(.swiper-button-next) {
+    right: 0;
+  }
+
+  /* Pagination */
+  :global(.swiper-pagination.swiper-pagination-horizontal) {
+    bottom: 0;
+  }
+
+  :global(.swiper-pagination-bullet) {
+    width: $slider-bullet-width;
+    height: $slider-bullet-height;
+    border-radius: 0;
+
+    opacity: 1;
+    background-color: var(--slider-bullet-inactive);
+  }
+
+  :global(.swiper-pagination-bullet-active) {
+    background-color: var(--slider-bullet-active);
+  }
+}
+
+.slideItem {
+  @include on-tablet {
+    padding-inline: $slider-arrow-gutter;
+  }
+
+  @include on-desktop {
+    padding-inline: $slider-arrow-gutter-desktop;
+  }
+}
+
+.imageLink,
+.bannerPicture,
+.bannerImage {
+  display: block;
+  width: 100%;
+}
+
+.bannerImage {
+  height: auto;
+}
+
+/* stylelint-enable selector-pseudo-class-no-unknown */

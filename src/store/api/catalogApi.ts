@@ -13,7 +13,7 @@ export const catalogApi = createApi({
   endpoints: builder => ({
     getProductsByCategory: builder.query<Product[], Category>({
       query: () => 'products.json',
-      transformResponse: (response: Product[], meta, arg) =>
+      transformResponse: (response: Product[], _meta, arg) =>
         response.filter(product => product.category === arg),
     }),
 
@@ -22,7 +22,7 @@ export const catalogApi = createApi({
       ProductRequestArgs
     >({
       query: arg => `${arg.category}.json`,
-      transformResponse: (response: ProductDetails[], meta, arg) =>
+      transformResponse: (response: ProductDetails[], _meta, arg) =>
         response.find(item => item.id === arg.itemId),
     }),
   }),

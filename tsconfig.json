@@ -8,14 +8,12 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
     "isolatedModules": true,
-    "baseUrl": ".",
     "paths": {
-      "@shared/*": ["src/modules/shared/*"],
-      "@store/*": ["src/store/*"],
-      "@modules/*": ["src/modules/*"]
+      "@shared/*": ["./src/modules/shared/*"],
+      "@store/*": ["./src/store/*"],
+      "@modules/*": ["./src/modules/*"]
     },
     "sourceMap": false,
-    "types": ["node", "cypress"],
-    "ignoreDeprecations": "6.0"
+    "types": ["node", "cypress"]
   }
 }
