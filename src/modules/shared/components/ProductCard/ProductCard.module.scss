@@ -1,0 +1,103 @@
+.productCard {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+
+  gap: $product-card-gap;
+  padding: $product-card-padding;
+
+  background-color: var(--bg-product-card-color);
+}
+
+.productImage {
+  display: block;
+
+  width: 100%;
+  height: $product-card-image-height;
+
+  object-fit: contain;
+}
+
+.productName {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  min-height: ($product-card-title-line-height * $product-card-title-lines);
+
+  font-size: $product-card-title-font-size;
+  font-weight: $product-card-title-font-weight;
+  line-height: $product-card-title-line-height;
+
+  color: var(--text-primary);
+}
+
+.fullPrice {
+  font-size: $product-card-price-font-size;
+  font-weight: $product-card-price-font-weight;
+  line-height: $product-card-price-line-height;
+
+  padding-bottom: $product-card-gap;
+
+  border-bottom: $product-card-divider-width solid var(--elements);
+
+  color: var(--text-primary);
+}
+
+.productSpecs {
+  display: flex;
+  flex-direction: column;
+
+  gap: $product-card-gap;
+}
+
+.productSpec {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: $product-card-spec-font-size;
+  font-weight: $product-card-spec-font-weight;
+  line-height: $product-card-spec-line-height;
+
+  color: var(--text-secondary);
+}
+
+.productSpecValue {
+  text-align: right;
+  color: var(--text-primary);
+}
+
+.productCardButtons {
+  display: flex;
+  gap: $product-card-gap;
+
+  margin-top: auto;
+}
+
+.addToCart {
+  flex: 1;
+  min-width: 0;
+
+  width: $product-card-cart-button-width;
+  height: $product-card-button-height;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+
+  /* Gray/White */
+  color: var(--text-primary);
+  background: var(--accent-color);
+}
+
+.iconHeart {
+  flex-shrink: 0;
+
+  width: $product-card-favorite-button-size;
+  height: $product-card-button-height;
+
+  background-color: var(--surface2);
+}

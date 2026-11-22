@@ -1,4 +1,4 @@
-import { Container } from '../Container';
+import { Container } from '../../shared/components/Container';
 import styles from './Hero.module.scss';
 import { HeroSlider } from './HeroSlider';
 import type { BannerInfo } from './types/banners';

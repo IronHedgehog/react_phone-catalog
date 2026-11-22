@@ -1,3 +1,4 @@
+import './css-globals/fonts.css';
 import './css-globals/page.css';
 import './css-globals/reset.css';
 import './css-globals/themes.css';

@@ -22,7 +22,7 @@ $section-gap-desktop: 56px;
 
 // font
 $basic-font-size: 16px;
-$main-font-family: 'Mont';
+$main-font-family: Mont;
 $main-font-style: normal;
 $main-font-weight: 600;
 $main-font-size: 14px;
@@ -62,3 +62,36 @@ $slider-bullet-width: 14px;
 $slider-bullet-height: 4px;
 $slider-arrow-icon-width: 6px;
 $slider-arrow-icon-height: 10px;
+
+// product card
+
+// Layout
+$product-card-padding: 32px;
+$product-card-width: 212px;
+$product-card-gap: 8px;
+$product-card-image-height: 129px;
+
+// Product name
+$product-card-title-font-size: 14px;
+$product-card-title-line-height: 19.33px;
+$product-card-title-font-weight: 600;
+$product-card-title-lines: 3;
+
+// Product Card — Price
+
+$product-card-price-font-size: 22px;
+$product-card-price-font-weight: 800;
+$product-card-price-line-height: 31px;
+$product-card-divider-width: 1px;
+
+// Product Card — Specifications
+
+$product-card-spec-font-size: 12px;
+$product-card-spec-font-weight: 700;
+$product-card-spec-line-height: 15px;
+
+// Product Card — Buttons
+
+$product-card-cart-button-width: 100px;
+$product-card-button-height: 40px;
+$product-card-favorite-button-size: 40px;

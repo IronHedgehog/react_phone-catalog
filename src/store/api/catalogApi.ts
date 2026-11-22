@@ -11,6 +11,10 @@ export const catalogApi = createApi({
   reducerPath: 'catalogApi',
   baseQuery: fetchBaseQuery({ baseUrl: `${import.meta.env.BASE_URL}api/` }),
   endpoints: builder => ({
+    getProducts: builder.query<Product[], void>({
+      query: () => 'products.json',
+    }),
+
     getProductsByCategory: builder.query<Product[], Category>({
       query: () => 'products.json',
       transformResponse: (response: Product[], _meta, arg) =>
@@ -28,5 +32,8 @@ export const catalogApi = createApi({
   }),
 });
 
-export const { useGetProductsByCategoryQuery, useGetProductDetailsQuery } =
-  catalogApi;
+export const {
+  useGetProductsQuery,
+  useGetProductsByCategoryQuery,
+  useGetProductDetailsQuery,
+} = catalogApi;

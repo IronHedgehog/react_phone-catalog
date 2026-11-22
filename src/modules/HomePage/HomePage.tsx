@@ -1,5 +1,11 @@
-import { Hero } from '@shared/components/Hero';
+import { BrandNewModels } from './BrandNewModels';
+import { Hero } from './Hero';
 
 export const HomePage = () => {
-  return <Hero />;
+  return (
+    <>
+      <Hero />
+      <BrandNewModels />
+    </>
+  );
 };

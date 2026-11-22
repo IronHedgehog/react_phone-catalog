@@ -8,8 +8,8 @@
   --slider-bullet-inactive: var(--border-color);
   --slider-bullet-active: var(--text-primary);
   --font-family:
-    'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Helvetica, Arial, sans-serif;
+    Mont, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
   --font-style: normal;
   --font-weight: 600;
   --font-size: 14px;
@@ -18,7 +18,12 @@
 
 [data-theme='dark'] {
   --bg-color: #0f1121;
+  --bg-product-card-color: #161827;
   --text-primary: #f1f2f9;
+  --text-secondary: #75767f;
+  --elements: #3b3e4a;
+  --surface2: #323542;
+  --accent-color: #905bff;
   --border-color: #3b3e4a;
   --icon-header-color: #4a4d58;
   --mobile-menu-link-color: #75767f;

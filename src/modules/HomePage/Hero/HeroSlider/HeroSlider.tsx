@@ -8,7 +8,7 @@ import {
 } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import type { BannerInfo } from '@shared/components/Hero/types/banners';
+import type { BannerInfo } from '@modules/HomePage/Hero/types/banners';
 
 import 'swiper/css';
 import 'swiper/css/a11y';
