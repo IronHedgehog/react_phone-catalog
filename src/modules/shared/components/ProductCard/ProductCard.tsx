@@ -28,7 +28,17 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       </ul>
       <div className={s.productCardButtons}>
         <button className={s.addToCart}>Add to cart</button>
-        <button className={s.iconHeart}>icon heart</button>
+        <button
+          type="button"
+          className={s.iconHeart}
+          aria-label="Add to favorites"
+        >
+          <svg className={s.heartIcon} aria-hidden="true">
+            <use
+              href={`${import.meta.env.BASE_URL}img/sprite.svg#icon-heart`}
+            />
+          </svg>
+        </button>
       </div>
     </article>
   );

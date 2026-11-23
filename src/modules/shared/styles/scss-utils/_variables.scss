@@ -67,15 +67,22 @@ $slider-arrow-icon-height: 10px;
 
 // Layout
 $product-card-padding: 32px;
-$product-card-width: 212px;
+$product-card-width-mobile: 212px;
+$product-card-width-tablet: 237px;
+$product-card-width-desktop: 272px;
 $product-card-gap: 8px;
-$product-card-image-height: 129px;
+$product-card-image-height-mobile: 129px;
+$product-card-image-height-tablet: 181px;
+$product-card-image-height-desktop: 196px;
 
 // Product name
 $product-card-title-font-size: 14px;
-$product-card-title-line-height: 19.33px;
+$product-card-title-line-height-mobile: 19.33px;
+$product-card-title-line-height-tablet: 21px;
 $product-card-title-font-weight: 600;
 $product-card-title-lines: 3;
+$title-min-height-tablet: 79px;
+$title-min-height-desktop: 58px;
 
 // Product Card — Price
 
@@ -95,3 +102,35 @@ $product-card-spec-line-height: 15px;
 $product-card-cart-button-width: 100px;
 $product-card-button-height: 40px;
 $product-card-favorite-button-size: 40px;
+
+/* Products Slider */
+
+// Header
+$products-slider-header-gap: 72px;
+$products-slider-header-margin-bottom: 24px;
+
+// Title
+$products-slider-title-font-size: 22px;
+$products-slider-title-font-weight: 800;
+$products-slider-title-line-height: 31px;
+$products-slider-title-font-size-desktop: 32px;
+$products-slider-title-line-height-desktop: 41px;
+
+// Navigation
+$products-slider-navigation-gap: 16px;
+$products-slider-navigation-button-size: 32px;
+$products-slider-navigation-border-width: 1px;
+
+// Navigation icons
+$products-slider-navigation-icon-width: 6px;
+$products-slider-navigation-icon-height: 9px;
+
+/* Product Card — Buttons */
+
+// Cart button typography
+$product-card-button-font-size: 14px;
+$product-card-button-font-weight: 700;
+$product-card-button-line-height: 21px;
+
+// Icons
+$product-card-heart-icon-size: 16px;

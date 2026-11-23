@@ -1,11 +1,10 @@
 import { useMemo } from 'react';
 
 import { Container } from '@shared/components/Container';
+import { ProductsSlider } from '@shared/components/ProductsSlider';
 import { useGetProductsQuery } from '@store/api/catalogApi';
 
 import styles from './BrandNewModels.module.scss';
-
-import { ProductsSlider } from '@shared/components/ProductsSlider';
 
 export const BrandNewModels = () => {
   const { data: products, isLoading, isError } = useGetProductsQuery();
@@ -29,8 +28,7 @@ export const BrandNewModels = () => {
   return (
     <section className={styles.section}>
       <Container>
-        <h2 className={styles.title}>Brand new models</h2>
-        <ProductsSlider products={newestProducts} />
+        <ProductsSlider title="Brand new models" products={newestProducts} />
       </Container>
     </section>
   );

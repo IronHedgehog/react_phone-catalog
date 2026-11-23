@@ -1,11 +1,10 @@
 .productCard {
   display: flex;
   flex-direction: column;
+  gap: $product-card-gap;
 
   width: 100%;
   height: 100%;
-
-  gap: $product-card-gap;
   padding: $product-card-padding;
 
   background-color: var(--bg-product-card-color);
@@ -13,11 +12,17 @@
 
 .productImage {
   display: block;
-
   width: 100%;
-  height: $product-card-image-height;
-
+  height: $product-card-image-height-mobile;
   object-fit: contain;
+
+  @include on-tablet {
+    height: $product-card-image-height-tablet;
+  }
+
+  @include on-desktop {
+    height: $product-card-image-height-desktop;
+  }
 }
 
 .productName {
@@ -25,32 +30,43 @@
   flex-direction: column;
   justify-content: flex-end;
 
-  min-height: ($product-card-title-line-height * $product-card-title-lines);
+  min-height: (
+    $product-card-title-line-height-mobile * $product-card-title-lines
+  );
 
   font-size: $product-card-title-font-size;
   font-weight: $product-card-title-font-weight;
-  line-height: $product-card-title-line-height;
-
+  line-height: $product-card-title-line-height-mobile;
   color: var(--text-primary);
+
+  @include on-tablet {
+    min-height: $title-min-height-tablet;
+    line-height: $product-card-title-line-height-tablet;
+  }
+
+  @include on-desktop {
+    min-height: $title-min-height-desktop;
+  }
 }
 
 .fullPrice {
+  padding-bottom: $product-card-gap;
+  border-bottom: $product-card-divider-width solid var(--elements);
+
   font-size: $product-card-price-font-size;
   font-weight: $product-card-price-font-weight;
   line-height: $product-card-price-line-height;
-
-  padding-bottom: $product-card-gap;
-
-  border-bottom: $product-card-divider-width solid var(--elements);
-
   color: var(--text-primary);
 }
 
 .productSpecs {
   display: flex;
   flex-direction: column;
-
   gap: $product-card-gap;
+
+  @include on-tablet {
+    padding-block: $product-card-gap;
+  }
 }
 
 .productSpec {
@@ -60,44 +76,52 @@
   font-size: $product-card-spec-font-size;
   font-weight: $product-card-spec-font-weight;
   line-height: $product-card-spec-line-height;
-
   color: var(--text-secondary);
 }
 
 .productSpecValue {
-  text-align: right;
   color: var(--text-primary);
+  text-align: right;
 }
 
 .productCardButtons {
   display: flex;
   gap: $product-card-gap;
-
   margin-top: auto;
 }
 
 .addToCart {
   flex: 1;
-  min-width: 0;
 
-  width: $product-card-cart-button-width;
+  // width: $product-card-cart-button-width;
   height: $product-card-button-height;
 
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 21px;
+  font-size: $product-card-button-font-size;
+  font-weight: $product-card-button-font-weight;
+  line-height: $product-card-button-line-height;
+  color: var(--text-primary);
   text-align: center;
 
-  /* Gray/White */
-  color: var(--text-primary);
   background: var(--accent-color);
 }
 
 .iconHeart {
+  cursor: pointer;
+
+  display: grid;
   flex-shrink: 0;
+  place-items: center;
 
   width: $product-card-favorite-button-size;
   height: $product-card-button-height;
 
+  color: var(--text-primary);
+
   background-color: var(--surface2);
+}
+
+.heartIcon {
+  width: $product-card-heart-icon-size;
+  height: $product-card-heart-icon-size;
+  fill: currentColor;
 }
