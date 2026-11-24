@@ -51,8 +51,8 @@
 
 .prices {
   display: flex;
-  align-items: center;
   gap: $product-card-gap;
+  align-items: center;
 
   padding-bottom: $product-card-gap;
   border-bottom: $product-card-divider-width solid var(--elements);
