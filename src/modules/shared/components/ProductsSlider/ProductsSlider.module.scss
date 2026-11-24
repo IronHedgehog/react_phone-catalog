@@ -13,14 +13,14 @@
 }
 
 .title {
-  font-size: $products-slider-title-font-size;
-  font-weight: $products-slider-title-font-weight;
-  line-height: $products-slider-title-line-height;
+  font-size: $section-title-font-size;
+  font-weight: $section-title-font-weight;
+  line-height: $section-title-line-height;
   color: var(--text-primary);
 
   @include on-tablet {
-    font-size: $products-slider-title-font-size-desktop;
-    line-height: $products-slider-title-line-height-desktop;
+    font-size: $section-title-font-size-desktop;
+    line-height: $section-title-line-height-desktop;
   }
 }
 

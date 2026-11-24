@@ -1,0 +1,75 @@
+.card {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+// Scale and position category images to match Figma compositions.
+.image {
+  position: absolute;
+  display: block;
+  max-width: none;
+  object-fit: contain;
+}
+
+.imageWrapper {
+  position: relative;
+
+  overflow: hidden;
+  display: block;
+
+  aspect-ratio: $category-card-image-aspect-ratio;
+  width: 100%;
+  margin-bottom: $category-card-image-margin-bottom;
+
+  &[data-category='phones'] {
+    background-color: $category-card-phones-bg;
+
+    .image {
+      top: $category-card-phones-image-top;
+      left: $category-card-phones-image-left;
+      width: $category-card-phones-image-width;
+      height: $category-card-phones-image-height;
+    }
+  }
+
+  &[data-category='tablets'] {
+    background-color: $category-card-tablets-bg;
+
+    .image {
+      top: $category-card-tablets-image-top;
+      left: $category-card-tablets-image-left;
+      width: $category-card-tablets-image-width;
+      height: $category-card-tablets-image-height;
+    }
+  }
+
+  &[data-category='accessories'] {
+    background-color: $category-card-accessories-bg;
+
+    .image {
+      top: 0;
+      left: $category-card-accessories-image-left;
+      scale: $category-card-accessories-image-scale;
+
+      width: $category-card-accessories-image-width;
+      height: $category-card-accessories-image-height;
+    }
+  }
+}
+
+.title {
+  margin-bottom: $category-card-title-margin-bottom;
+
+  font-size: $category-card-title-font-size;
+  font-weight: $category-card-title-font-weight;
+  line-height: $category-card-title-line-height;
+  color: var(--text-primary);
+}
+
+.count {
+  font-size: $category-card-count-font-size;
+  font-weight: $category-card-count-font-weight;
+  line-height: $category-card-count-line-height;
+  color: var(--text-secondary);
+}

@@ -40,6 +40,14 @@ $mobile-min-width: 320px;
 $tablet-min-width: 640px;
 $desktop-min-width: 1200px;
 
+/* Section Titles */
+
+$section-title-font-size: 22px;
+$section-title-font-size-desktop: 32px;
+$section-title-font-weight: 800;
+$section-title-line-height: 31px;
+$section-title-line-height-desktop: 41px;
+
 // header
 $header-height-sm: 48px;
 $header-height-lg: 64px;
@@ -109,13 +117,6 @@ $product-card-favorite-button-size: 40px;
 $products-slider-header-gap: 72px;
 $products-slider-header-margin-bottom: 24px;
 
-// Title
-$products-slider-title-font-size: 22px;
-$products-slider-title-font-weight: 800;
-$products-slider-title-line-height: 31px;
-$products-slider-title-font-size-desktop: 32px;
-$products-slider-title-line-height-desktop: 41px;
-
 // Navigation
 $products-slider-navigation-gap: 16px;
 $products-slider-navigation-button-size: 32px;
@@ -134,3 +135,54 @@ $product-card-button-line-height: 21px;
 
 // Icons
 $product-card-heart-icon-size: 16px;
+
+/* Shop By Category — Section */
+
+$shop-by-category-list-gap-phone: 32px;
+$shop-by-category-list-gap-tablet: 15px;
+$shop-by-category-title-margin-bottom: 24px;
+
+/* Category Card — Layout */
+
+$category-card-image-aspect-ratio: 1;
+$category-card-image-margin-bottom: 24px;
+
+/* Category Card — Title */
+
+$category-card-title-font-size: 20px;
+$category-card-title-font-weight: 700;
+$category-card-title-line-height: 26px;
+$category-card-title-margin-bottom: 4px;
+
+/* Category Card — Count */
+
+$category-card-count-font-size: 14px;
+$category-card-count-font-weight: 600;
+$category-card-count-line-height: 21px;
+
+/* Category Card — Backgrounds */
+
+$category-card-phones-bg: #6d6474;
+$category-card-tablets-bg: #8d8d92;
+$category-card-accessories-bg: #973d5f;
+
+/* Category Card — Phones Image */
+
+$category-card-phones-image-width: 104.9%;
+$category-card-phones-image-height: 124%;
+$category-card-phones-image-left: 12.5%;
+$category-card-phones-image-top: 10.8%;
+
+/* Category Card — Tablets Image */
+
+$category-card-tablets-image-width: 148.4%;
+$category-card-tablets-image-height: 148.4%;
+$category-card-tablets-image-left: 6%;
+$category-card-tablets-image-top: 5.4%;
+
+/* Category Card — Accessories Image */
+
+$category-card-accessories-image-width: 147.7%;
+$category-card-accessories-image-height: 117.8%;
+$category-card-accessories-image-left: 27.8%;
+$category-card-accessories-image-scale: 1.2;
