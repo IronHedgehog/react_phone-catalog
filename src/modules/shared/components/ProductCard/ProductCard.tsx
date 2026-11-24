@@ -2,16 +2,29 @@ import { Product } from '@shared/types';
 import s from './ProductCard.module.scss';
 interface ProductCardProps {
   product: Product;
+  showDiscount?: boolean;
 }
 
-export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
-  const { image, name, fullPrice, screen, capacity, ram } = product;
+export const ProductCard: React.FC<ProductCardProps> = ({
+  product,
+  showDiscount,
+}) => {
+  const { image, name, fullPrice, price, screen, capacity, ram } = product;
 
   return (
     <article className={s.productCard}>
       <img src={image} alt={name} className={s.productImage} />
       <p className={s.productName}>{name}</p>
-      <p className={s.fullPrice}>${fullPrice}</p>
+      <div className={s.prices}>
+        {showDiscount ? (
+          <>
+            <p className={s.price}>${price}</p>
+            <p className={`${s.fullPrice} ${s.through}`}>${fullPrice}</p>
+          </>
+        ) : (
+          <p className={s.fullPrice}>${fullPrice}</p>
+        )}
+      </div>
       <ul className={s.productSpecs}>
         <li className={s.productSpec}>
           <p className={s.productSpecText}>Screen:</p>

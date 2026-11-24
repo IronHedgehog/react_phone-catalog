@@ -49,14 +49,34 @@
   }
 }
 
-.fullPrice {
+.prices {
+  display: flex;
+  align-items: center;
+  gap: $product-card-gap;
+
   padding-bottom: $product-card-gap;
   border-bottom: $product-card-divider-width solid var(--elements);
+}
 
+.fullPrice {
   font-size: $product-card-price-font-size;
   font-weight: $product-card-price-font-weight;
   line-height: $product-card-price-line-height;
   color: var(--text-primary);
+}
+
+.price {
+  font-size: $product-card-price-font-size;
+  font-weight: $product-card-price-font-weight;
+  line-height: $product-card-price-line-height;
+  color: var(--text-primary);
+}
+
+.through {
+  font-weight: $product-card-old-price-font-weight;
+  line-height: $product-card-old-price-line-height;
+  color: var(--text-secondary);
+  text-decoration-line: line-through;
 }
 
 .productSpecs {

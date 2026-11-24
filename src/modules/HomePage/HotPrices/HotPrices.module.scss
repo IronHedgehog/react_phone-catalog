@@ -1,0 +1,11 @@
+.section {
+  padding-block: $section-gap;
+
+  @include on-tablet {
+    padding-block: $section-gap-tablet;
+  }
+
+  @include on-desktop {
+    padding-block: $section-gap-desktop;
+  }
+}

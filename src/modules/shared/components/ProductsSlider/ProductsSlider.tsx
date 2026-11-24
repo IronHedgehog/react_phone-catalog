@@ -12,11 +12,13 @@ import styles from './ProductsSlider.module.scss';
 interface ProductsSliderProps {
   title: string;
   products: Product[];
+  showDiscount?: boolean;
 }
 
 export const ProductsSlider: React.FC<ProductsSliderProps> = ({
   title,
   products,
+  showDiscount = false,
 }) => {
   const [navigation, setNavigation] = useState({
     isBeginning: true,
@@ -82,7 +84,7 @@ export const ProductsSlider: React.FC<ProductsSliderProps> = ({
       >
         {products.map(product => (
           <SwiperSlide key={product.id} className={styles.slide}>
-            <ProductCard product={product} />
+            <ProductCard product={product} showDiscount={showDiscount} />
           </SwiperSlide>
         ))}
       </Swiper>
