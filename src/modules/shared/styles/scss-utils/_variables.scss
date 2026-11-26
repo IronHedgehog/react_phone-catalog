@@ -1,3 +1,5 @@
+@use 'sass:list';
+
 /* Layout */
 $max-content-width: 1200px;
 $header-height: 64px;
@@ -187,3 +189,40 @@ $category-card-accessories-image-width: 147.7%;
 $category-card-accessories-image-height: 117.8%;
 $category-card-accessories-image-left: 27.8%;
 $category-card-accessories-image-scale: 1.2;
+
+/* Footer */
+
+// Layout
+$footer-border-width: 1px;
+$footer-content-gap: 32px;
+$footer-padding-block: 32px;
+
+// Logo
+$footer-logo-height: 32px;
+$footer-logo-aspect-ratio: list.slash(64, 22);
+
+// Navigation
+$footer-navigation-gap: 16px;
+$footer-navigation-gap-desktop: 106px;
+
+// Navigation typography
+$footer-navigation-font-weight: 800;
+$footer-navigation-font-size: 12px;
+$footer-navigation-line-height: 11px;
+$footer-navigation-letter-spacing: 0.04em;
+
+// Back to top
+$back-to-top-gap: 16px;
+
+// Back to top typography
+$back-to-top-font-weight: 700;
+$back-to-top-font-size: 12px;
+$back-to-top-line-height: 15px;
+
+// Back to top button
+$back-to-top-button-width: 32px;
+$back-to-top-button-height: 32px;
+
+// Back to top icon
+$back-to-top-icon-width: 9.33px;
+$back-to-top-icon-height: 5.33px;

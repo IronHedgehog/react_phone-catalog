@@ -1,1 +1,96 @@
-// comment
+.footer {
+  border-top: $footer-border-width solid var(--elements);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: $footer-content-gap;
+  padding-block: $footer-padding-block;
+
+  @include on-tablet {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.logoLink {
+  display: block;
+  width: fit-content;
+  color: var(--text-primary);
+}
+
+.logo {
+  display: block;
+
+  aspect-ratio: $footer-logo-aspect-ratio;
+  width: auto;
+  height: $footer-logo-height;
+
+  fill: currentColor;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: $footer-navigation-gap;
+
+  @include on-tablet {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @include on-desktop {
+    gap: $footer-navigation-gap-desktop;
+  }
+}
+
+.navigationLink {
+  display: block;
+
+  font-size: $footer-navigation-font-size;
+  font-weight: $footer-navigation-font-weight;
+  line-height: $footer-navigation-line-height;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: $footer-navigation-letter-spacing;
+}
+
+.backToTop {
+  cursor: pointer;
+
+  display: flex;
+  gap: $back-to-top-gap;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--text-secondary);
+}
+
+.backToTopText {
+  font-size: $back-to-top-font-size;
+  font-weight: $back-to-top-font-weight;
+  line-height: $back-to-top-line-height;
+  color: var(--text-secondary);
+  text-align: right;
+}
+
+.backToTopButton {
+  display: grid;
+  place-items: center;
+
+  width: $back-to-top-button-width;
+  height: $back-to-top-button-height;
+
+  color: var(--text-primary);
+
+  background-color: var(--surface2);
+}
+
+.backToTopIcon {
+  width: $back-to-top-icon-width;
+  height: $back-to-top-icon-height;
+  fill: currentColor;
+}
