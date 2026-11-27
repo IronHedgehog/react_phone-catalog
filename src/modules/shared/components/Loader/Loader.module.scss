@@ -1,1 +1,9 @@
-// not empty
+.loader {
+  pointer-events: none;
+
+  position: fixed;
+  inset: 0;
+
+  display: grid;
+  place-items: center;
+}

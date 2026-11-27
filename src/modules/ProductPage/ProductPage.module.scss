@@ -1,1 +1,45 @@
-// comment
+.breadcrumbsWrapper {
+  margin-top: $product-page-breadcrumbs-margin-top;
+}
+
+.products {
+  padding-block: $product-page-padding-top-mobile
+    $product-page-padding-bottom-mobile;
+
+  @include on-tablet {
+    padding-block-start: $product-page-padding-top-tablet;
+  }
+
+  @include on-desktop {
+    padding-block-end: $product-page-padding-bottom-desktop;
+  }
+}
+
+.productTitle {
+  margin-bottom: $product-page-title-margin-bottom-mobile;
+
+  font-size: $h1-font-size;
+  font-weight: $h1-font-weight;
+  line-height: $h1-line-height;
+  color: var(--text-primary);
+  letter-spacing: $product-page-title-letter-spacing;
+
+  @include on-tablet {
+    margin-bottom: $product-page-title-margin-bottom-tablet;
+    font-size: $h1-font-size-desktop;
+    line-height: $h1-line-height-desktop;
+  }
+}
+
+.productCount {
+  margin-bottom: $product-page-count-margin-bottom-mobile;
+
+  font-size: $product-page-count-font-size;
+  font-weight: $product-page-count-font-weight;
+  line-height: $product-page-count-line-height;
+  color: var(--text-secondary);
+
+  @include on-tablet {
+    margin-bottom: $product-page-count-margin-bottom-tablet;
+  }
+}

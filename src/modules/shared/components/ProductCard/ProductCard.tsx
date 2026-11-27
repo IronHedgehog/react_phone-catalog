@@ -13,7 +13,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 
   return (
     <article className={s.productCard}>
-      <img src={image} alt={name} className={s.productImage} />
+      <img src={image} alt={name} className={s.productImage} loading="lazy" />
       <p className={s.productName}>{name}</p>
       <div className={s.prices}>
         {showDiscount ? (

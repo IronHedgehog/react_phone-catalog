@@ -1,0 +1,42 @@
+.list {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.homeIcon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.separator {
+  display: block;
+  width: 16px;
+  height: 16px;
+  fill: var(--gray-icons);
+}
+
+.link,
+.current {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+}
+
+.link {
+  display: block;
+  color: var(--text-primary);
+}
+
+.current {
+  display: block;
+  color: var(--text-secondary);
+}

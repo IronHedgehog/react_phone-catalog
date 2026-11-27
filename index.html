@@ -5,10 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+      body {
+        margin: 0;
+        background-color: #0f1121;
+      }
+
+      .initialLoader {
+        position: fixed;
+        inset: 0;
+
+        display: grid;
+        place-items: center;
+      }
+
+      .initialSpinner {
+        width: 48px;
+        height: 48px;
+        box-sizing: border-box;
+
+        border: 3px solid #905bff;
+        border-bottom-color: transparent;
+        border-radius: 50%;
+
+        animation: spin 0.85s linear infinite;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .initialSpinner {
+          animation: none;
+        }
+      }
+    </style>
     <title>Vite + React + TS</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root" class="app">
+      <div class="initialLoader" role="status" aria-label="Loading">
+        <div class="initialSpinner"></div>
+      </div>
+    </div>
     <script type="module" src="/src/index.tsx"></script>
   </body>
 </html>

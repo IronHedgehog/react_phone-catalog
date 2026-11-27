@@ -1,5 +1,3 @@
-/* src/modules/shared/styles/variables.scss */
-
 :root {
   --bg-color: #fff;
   --text-primary: #121212;
@@ -23,6 +21,7 @@
   --text-secondary: #75767f;
   --elements: #3b3e4a;
   --surface2: #323542;
+  --gray-icons: #4a4d58;
   --accent-color: #905bff;
   --border-color: #3b3e4a;
   --icon-header-color: #4a4d58;
